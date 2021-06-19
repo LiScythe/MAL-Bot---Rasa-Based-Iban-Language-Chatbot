@@ -46,4 +46,4 @@ The data size used in MAL Bot is 1500 utterances.
 2. Copy the link generated. Eg: http://localhost:5002/conversations
 
 # License
-Licensed under the GNU General Public License v3. Copyright 2018 Rasa Technologies GmbH. Copy of the license. Licensees may convey the work under this license. There is no warranty f
+Licensed under the GNU General Public License v3. Copyright 2018 Rasa Technologies GmbH. Copy of the license. Licensees may convey the work under this license. There is no warranty for the work.
