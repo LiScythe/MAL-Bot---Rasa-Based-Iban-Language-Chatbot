@@ -62,15 +62,14 @@ The data size used in MAL Bot is 1500 utterances.
 # To RUN MAL BOT
 1. Reopen Miniconda Prompt.
 2. Use the following command:
-  a. cd <location/filename> Eg: cd desktop/MAL BOT
-  b. conda activate rasa
-  c. rasa run actions
+- cd <location/filename> Eg: cd desktop/MAL BOT
+- conda activate rasa
+- rasa run actions
 
 # To TRAIN MAL BOT
 1. Before able to chat with MAL BOT, train the bot first by the following methods:
-  a. rasa train
-         or
-  b. rasa interactive
+- rasa train
+- rasa interactive
   
 # To TRAIN MAL BOT via Rasa X
 1. Run the following command:
