@@ -17,7 +17,8 @@ The data size used in MAL Bot is 1500 utterances.
   c. pip install rasa
   d. pip install rasa-x --extra-index-url https://pypi.rasa.com/simple
   e. rasa init
-4. Download the files or folder from this github and replace the folder and files that similar with the downloaded folders and files.
+4. Open created rasa folder
+5. Download the files or folder from this github and replace the folder and files that similar with the downloaded folders and files.
   
 # Files Overview
 1. data/stories.yml - Contains Stories used by bot to learn conversation flow
