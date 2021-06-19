@@ -26,9 +26,13 @@ The data size used in MAL Bot is 1500 utterances.
 4. domain.yml - Contain Domain data that used by bot to return response to user questions.
 5. config.yml - Contain NLU pipeline and Dialgue Policy
 6. actions.py - Used to Save and Generate Dialogue Corpus between user and chatbot is ".tsv" format.
+7. The code shown as following:
 
-Code Snippet:
-if not os.path.isfile('chats.tsv'):
+        conversation=tracker.events
+        print(conversation)
+        import os
+        #if file not exist, create file
+        if not os.path.isfile('chats.tsv'):
             with open('chats.tsv','w') as file:
                 file.write("user_input,\tbot_reply\n")
         chat_data=''
