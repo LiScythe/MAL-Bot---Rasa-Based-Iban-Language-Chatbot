@@ -25,7 +25,36 @@ The data size used in MAL Bot is 1500 utterances.
 3. data/rules.yml - Contain Rules data that bot used to return a set response when a certain intents is identified.
 4. domain.yml - Contain Domain data that used by bot to return response to user questions.
 5. config.yml - Contain NLU pipeline and Dialgue Policy
-6. action
+6. actions.py - Used to Save and Generate Dialogue Corpus between user and chatbot is ".tsv" format.
+  Code Snippet:
+   import os
+        #if file not exist, create file
+        if not os.path.isfile('chats.tsv'):
+            with open('chats.tsv','w') as file:
+                file.write("user_input,\tbot_reply\n")
+        chat_data=''
+        for i in conversation:
+            if i['event'] == 'user':
+                chat_data+=i['text']+''
+                print('user: {}'.format(i['text']))
+                if len(i['parse_data']['entities']) > 0:
+                    # chat_data+=i['parse_data']['entities'][0]['value']+'\t'
+                    chat_data+="\t"
+                    print('extra data:', i['parse_data']['entities'][0]['entity'], '=',
+                          i['parse_data']['entities'][0]['value'])
+                else:
+                    chat_data+="\t"
+            elif i['event'] == 'bot':
+                print('Bot: {}'.format(i['text']))
+                try:
+                    chat_data+=i['text']+'\n'
+                    # chat_data+=i['metadata']['utter_action']+','+i['text']+'\n'
+                except KeyError:
+                    pass
+        else:
+            #if file exist, append file content
+            with open('chats.tsv','a') as file:
+                file.write(chat_data)
 
 # To RUN MAL BOT
 1. Reopen Miniconda Prompt.
