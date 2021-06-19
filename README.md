@@ -26,10 +26,9 @@ The data size used in MAL Bot is 1500 utterances.
 4. domain.yml - Contain Domain data that used by bot to return response to user questions.
 5. config.yml - Contain NLU pipeline and Dialgue Policy
 6. actions.py - Used to Save and Generate Dialogue Corpus between user and chatbot is ".tsv" format.
-  Code Snippet:
-   import os
-        #if file not exist, create file
-        if not os.path.isfile('chats.tsv'):
+
+Code Snippet:
+if not os.path.isfile('chats.tsv'):
             with open('chats.tsv','w') as file:
                 file.write("user_input,\tbot_reply\n")
         chat_data=''
@@ -55,7 +54,7 @@ The data size used in MAL Bot is 1500 utterances.
             #if file exist, append file content
             with open('chats.tsv','a') as file:
                 file.write(chat_data)
-
+                
 # To RUN MAL BOT
 1. Reopen Miniconda Prompt.
 2. Use the following command:
